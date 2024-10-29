@@ -1,7 +1,6 @@
 ﻿namespace ShootEmUp
 {
 	using UnityEngine;
-
 	
 	public class MoveAgent : MonoBehaviour
 	{

@@ -10,7 +10,7 @@
         void FixedUpdate()
         {
             if (!_moveAgent.TryMove())
-                _shootAgent.TryAttack();s
+                _shootAgent.TryAttack();
         }
 
         public void Init(Ship playerShip, Vector2 endPoint)
