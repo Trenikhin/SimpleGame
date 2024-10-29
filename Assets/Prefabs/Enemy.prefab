@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38303f938c1e42278c8b69229eb6e384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: 100
   <Value>k__BackingField: 20
 --- !u!114 &4548122199853567318
 MonoBehaviour:
@@ -224,11 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b6a71cf6ed9429ca074229572c465e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 1
-  _physicsLayer: 13
   _firePoint: {fileID: 3195880656587174614}
-  _velocity: 1
-  _color: {r: 1, g: 0, b: 0.2573738, a: 1}
+  _config: {fileID: 11400000, guid: c4d49340768cc1f41964f3acb9fa27bd, type: 2}
 --- !u!114 &2804313157090332912
 MonoBehaviour:
   m_ObjectHideFlags: 0

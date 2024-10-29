@@ -1,15 +1,13 @@
 ﻿namespace ShootEmUp
 {
+	using Configs;
 	using UnityEngine;
 	
 	public class Gun : MonoBehaviour
 	{
-		[SerializeField] int          _damage = 1;
-		[SerializeField] EPhysicsLayer _physicsLayer;
 		[SerializeField] Transform    _firePoint;
-		[SerializeField] float        _velocity;
-		[SerializeField] Color _color = Color.blue;
-
+		[SerializeField] GunConfig    _config;
+ 		
 		BulletManager _bulletManager;
 		
 		void Start()
@@ -21,10 +19,10 @@
 		{
 			_bulletManager.SpawnBullet(
 				_firePoint.position,
-				_color,
-				(int) _physicsLayer,
-				_damage,
-				direction * _velocity
+				_config.Color,
+				(int) _config.Layer,
+				_config.Damage,
+				direction * _config.Velocity
 			);
 		}
 	}
