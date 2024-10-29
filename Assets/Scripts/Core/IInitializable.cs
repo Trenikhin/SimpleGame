@@ -1,7 +1,7 @@
 ﻿namespace ShootEmUp
 {
-    public interface IInitializable
-    {
-        void Init();
-    }
+	public interface IInitializable
+	{
+		void Init();
+	}
 }

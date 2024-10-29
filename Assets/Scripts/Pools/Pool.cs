@@ -1,19 +1,18 @@
 ﻿namespace ShootEmUp
 {
-	using UnityEngine;
 	using System.Collections.Generic;
+	using UnityEngine;
 
-	
 	public class Pool<T> : MonoBehaviour where T : Component
 	{
 		[SerializeField] T _prefab;
 		[SerializeField] Transform _worldTransform;
 		[SerializeField] Transform _container;
-		
+
 		readonly HashSet<T> _activeObjs = new();
-		readonly Queue<T>   _objs    = new();
-        
-        
+		readonly Queue<T> _objs = new();
+
+
 		public T Rent()
 		{
 			if (_objs.TryDequeue(out var obj))
@@ -21,13 +20,13 @@
 			else
 				obj = Instantiate(_prefab, _worldTransform);
 
-			_activeObjs.Add( obj );
-			OnActivate( obj );
-            
+			_activeObjs.Add(obj);
+			OnActivate(obj);
+
 			return obj;
 		}
 
-        
+
 		public void Return(T obj)
 		{
 			if (_activeObjs.Remove(obj))
@@ -38,14 +37,14 @@
 			}
 		}
 
-		protected virtual void OnActivate( T obj )
+		protected virtual void OnActivate(T obj)
 		{
-			obj.gameObject.SetActive( true );
+			obj.gameObject.SetActive(true);
 		}
 
-		protected virtual void OnDeactivate( T obj )
+		protected virtual void OnDeactivate(T obj)
 		{
-			obj.gameObject.SetActive( false );
+			obj.gameObject.SetActive(false);
 		}
 	}
 }

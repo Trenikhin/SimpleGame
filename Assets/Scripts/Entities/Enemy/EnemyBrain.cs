@@ -1,22 +1,22 @@
 ﻿namespace ShootEmUp
 {
-    using UnityEngine;
-    
-    public class EnemyBrain : MonoBehaviour 
-    {
-        [SerializeField] MoveAgent _moveAgent;
-        [SerializeField] ShootAgent _shootAgent;
+	using UnityEngine;
 
-        void FixedUpdate()
-        {
-            if (!_moveAgent.TryMove())
-                _shootAgent.TryAttack();
-        }
+	public class EnemyBrain : MonoBehaviour
+	{
+		[SerializeField] MoveAgent _moveAgent;
+		[SerializeField] ShootAgent _shootAgent;
 
-        public void Init(Ship playerShip, Vector2 endPoint)
-        {
-            _moveAgent.Setup( endPoint );
-            _shootAgent.Setup( playerShip );
-        }
-    }
+		void FixedUpdate()
+		{
+			if (!_moveAgent.TryMove())
+				_shootAgent.TryAttack();
+		}
+
+		public void Init(Ship playerShip, Vector2 endPoint)
+		{
+			_moveAgent.Setup(endPoint);
+			_shootAgent.Setup(playerShip);
+		}
+	}
 }

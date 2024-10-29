@@ -1,4 +1,6 @@
 ﻿namespace ShootEmUp
 {
-	public class EnemyPool : Pool<Ship> {}
+	public class EnemyPool : Pool<Ship>
+	{
+	}
 }
