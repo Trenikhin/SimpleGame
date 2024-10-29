@@ -15,7 +15,7 @@
 		}
 		
 		public bool TryMove()
-		{
+		{    
 			Vector2 vector = _destination - (Vector2) transform.position;
 			
 			if (vector.magnitude <= _minDistance)
