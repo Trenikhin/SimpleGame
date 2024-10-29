@@ -1,9 +1,8 @@
 ﻿namespace ShootEmUp
 {
     using UnityEngine;
-
     
-	public class EnemyBrain : MonoBehaviour
+    public class EnemyBrain : MonoBehaviour 
     {
         [SerializeField] MoveAgent _moveAgent;
         [SerializeField] ShootAgent _shootAgent;
@@ -19,5 +18,5 @@
             _moveAgent.Setup( endPoint );
             _shootAgent.Setup( playerShip );
         }
-	}
+    }
 }
